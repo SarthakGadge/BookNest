@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django_otp.plugins.otp_email',
     'corsheaders',
     'userauth',
+    'admin_app'
 ]
 
 AUTH_USER_MODEL = 'userauth.CustomUser'
@@ -89,6 +90,8 @@ DATABASES = {
         'PORT': '5432',       # Default PostgreSQL port
     }
 }
+MEDIA_URL = '/media/'  # URL prefix for serving media files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=30),

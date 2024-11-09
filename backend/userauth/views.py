@@ -100,7 +100,7 @@ class LoginView(APIView):
         user = CustomUser.objects.filter(email=email).first()
 
         if not user:
-            return Response({"msg": "There is user registered with this email."}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"msg": "There is no user registered with this email."}, status=status.HTTP_400_BAD_REQUEST)
 
         if user.is_active == 'false':
             if send_email(user):
