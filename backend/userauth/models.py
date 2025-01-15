@@ -19,6 +19,7 @@ class CustomUser(AbstractUser):
     otp_max_out = models.DateTimeField(null=True, blank=True)
     password_reset_otp = models.CharField(max_length=6, null=True, blank=True)
     password_reset_otp_expiry = models.DateTimeField(null=True, blank=True)
+    is_profile_complete = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'  # Use email as the username field
     REQUIRED_FIELDS = ['username']  # Remove email from here if it was present

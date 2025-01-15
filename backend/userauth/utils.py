@@ -6,6 +6,7 @@ from django.db import connection
 from django.conf import settings
 import os
 from dotenv import load_dotenv
+from rest_framework.permissions import BasePermission
 
 
 def send_email(user):
@@ -122,3 +123,8 @@ def forgot_password_email(user):
     except Exception as e:
         print(f"Error sending email: {e}")
         return False
+
+
+class IsUser(BasePermission):
+    def has_permission(self, request, view):
+        return request.user.is_authenticated and request.user.role == 'user'

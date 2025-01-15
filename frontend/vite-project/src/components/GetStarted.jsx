@@ -1,7 +1,7 @@
 const GetStarted = () => {
   return (
     <>
-      <h1>GetStarted</h1>
+      <main className="bg-black text-white flex-1">Login</main>
     </>
   );
 };

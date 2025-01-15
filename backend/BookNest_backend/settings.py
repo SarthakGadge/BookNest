@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'django_filters',
     'django_otp',
+    'Book',
     'user_app',
     'django_otp.plugins.otp_email',
     'corsheaders',
@@ -136,11 +137,3 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
 }
-
-# use personal info
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.hostinger.com"
-EMAIL_PORT = 587  # Use 465 if using SSL
-EMAIL_HOST_USER = "aa@thedatatechlabs.com"
-EMAIL_HOST_PASSWORD = "Tdtl@2024#"
-DEFAULT_FROM_EMAIL = "aa@thedatatechlabs.com"
