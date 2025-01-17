@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import GetStarted from "./components/GetStarted";
 import AboutUs from "./components/AboutUs";
 import LandingPage from "./components/LandingPage";
+import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
+      <Footer />
     </>
   );
 }
