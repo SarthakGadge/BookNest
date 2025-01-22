@@ -5,6 +5,7 @@ import AboutUs from "./components/AboutUs";
 import LandingPage from "./components/LandingPage";
 import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
+import Register from "./components/Register";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/get-started" element={<GetStarted />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
       <Footer />
     </>

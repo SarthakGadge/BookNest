@@ -130,6 +130,7 @@ class LoginView(APIView):
                 'username': authenticated_user.username,
                 'email': authenticated_user.email,
                 'role': authenticated_user.role,
+                'msg': "Login successful"
             }, status=status.HTTP_200_OK)
         else:
             return Response({"msg": "Invalid credentials"}, status=status.HTTP_401_UNAUTHORIZED)
